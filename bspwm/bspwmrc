@@ -1,0 +1,46 @@
+#!/bin/sh
+
+export PATH=$PATH:$HOME/.config/bspwm/
+export SCRIPTS=$HOME/.config/bspwm/scripts/
+xset -b &
+killall pulseaudio; pulseaudio -D &
+killall sxhkd; sxhkd &
+xrdb .Xresources
+feh --bg-fill ~/Pictures/arsenixc-rooftop.png
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+. $SCRIPTS/floattag.sh &
+. $SCRIPTS/colors.sh 
+
+bspc config border_width 2
+bspc config window_gap 6
+bspc config split_ratio 0.53
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config click_to_focus true
+bspc config focus_follows_pointer true
+bspc config top_padding 18
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Firefox desktop='^2' follow=on
+bspc rule -a Thunderbird desktop='^5'
+bspc rule -a VirtualBox\ Machine state=floating follow=on
+bspc rule -a mpv state=floating border-width=0
+bspc rule -a Screenkey manage=off
+
+#pseudoautomatic tiling based on example script
+bspc config external_rules_command $SCRIPTS/pseudoautomaticmode &
+
+#Bar config
+nm-applet &
+xset -b &
+xsetroot -cursor_name left_ptr
+xdo below -t polybar 
+redshift -P -O 3800
+compton --backend glx --vsync opengl-swc &
+sleep 0.4
+. $SCRIPTS/polybar.sh &
+JAVA_AWT_WM_NONREPARENTING=1
+#this shouldnt be handled by numbers because changing bios settings changes the id number
+xinput set-prop 10 "libinput Tapping Enabled" 1
+

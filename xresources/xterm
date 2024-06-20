@@ -1,0 +1,52 @@
+XTerm.vt100.font: xft:myfont:size=myfontsize,xft:myaltfont:size=13:hinting=false
+xft:myiconfont:pixelsize=myiconfontsize
+
+XTerm.vt100.foreground:   myfg
+XTerm.vt100.background: mybg
+!XTerm.vt100.background:   rgba:11ef/090f/100f/dddd
+!XTerm.vt100.background:   rgba:11ef/090f/100f
+!most recent
+!XTerm.vt100.background:   rgba:11ef/090f/100f/99dd
+!XTerm.vt100.background: rgba:000d/000a/000f/dd00
+XTerm.vt100.cursorColor:  lwhite
+
+xterm.vt100.secondaryScreen: 1
+xterm.vt100.secondaryScroll: 1
+xterm.vt100.secondaryWheel: true
+xterm.vt100.letterSpacing: 0
+xterm.vt100.lineSpace: 0
+
+xterm.vt100 xft.lcdfilter:lcdlight
+
+
+! black
+XTerm.vt100.color0:		dblack       
+XTerm.vt100.color8:       lblack
+
+! red
+XTerm.vt100.color1:       dred
+XTerm.vt100.color9:       lred
+
+! green
+XTerm.vt100.color2:      dgreen
+XTerm.vt100.color10:     lgreen
+
+! yellow
+XTerm.vt100.color3:      dyellow
+XTerm.vt100.color11:     lyellow
+
+! blue
+XTerm.vt100.color4:      dblue
+XTerm.vt100.color12:     lblue
+
+! magenta
+XTerm.vt100.color5:       dmag
+XTerm.vt100.color13:      lmag
+
+! cyan
+XTerm.vt100.color6:       dcyan
+XTerm.vt100.color14:      lcyan
+! white
+XTerm.vt100.color7:       dwhite
+XTerm.vt100.color15:      lwhite
+

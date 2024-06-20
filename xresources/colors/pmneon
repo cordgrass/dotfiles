@@ -1,0 +1,44 @@
+! special
+#define myfg #919191
+
+!this was the longterm one, below is it desaturated and darkened
+!#define mybg #353c57
+#define mybg #1f2129
+!#define  #919191
+
+! black
+#define dblack    #202020 
+#define lblack     #877d9d
+
+! red
+#define dred      #f64984
+#define lred     #ff83fa
+
+! green
+#define dgreen     #3798c0
+#define lgreen     #3bd6ff
+
+! yellow
+!#define dyellow      #007086
+!#define lyellow     #00ddf4
+#define dyellow		#db7573
+#define lyellow 	#fcb9a0
+
+! blue
+#define dblue      #7760b7
+!#define lblue     #d5b8ff
+#define lblue 	  #a580de
+
+! magenta
+#define dmag    #b165ba
+#define lmag    #cd96d8
+
+! cyan
+!#define dcyan     #0061b1
+#define dcyan	#419ecb
+#define lcyan     #7fb7ff
+
+! white
+#define dwhite     #c9c9c9
+#define lwhite     #e4e4e4
+

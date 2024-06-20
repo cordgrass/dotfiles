@@ -1,0 +1,61 @@
+urxvt.font: xft:myfont:size=myfontsize,xft:myaltfont:size=13:hinting=true
+!xft:myiconfont:pixelsize=myiconfontsize
+
+urxvt.meta8: true
+urxvt.depth: 32
+urxvt.scrollBar: false
+urxvt.savelines: 2000000
+urxvt.cursorBlink: true
+!urxvt.reverseVideo: true
+urxvt.urlLauncher: firefox
+urxvt.visualBell: false
+
+urxvt.secondaryScreen: 1
+urxvt.secondaryScroll: 1 
+urxvt.secondaryWheel: true
+urxvt.letterSpace: 1.9
+urxvt.lineSpace: 0
+
+urxvt xft.lcdfilter:lcdlight
+
+
+urxvt.foreground:   myfg
+urxvt.background: mybg
+!urxvt.background:   rgba:11ef/090f/100f/dddd
+!urxvt.background:   rgba:11ef/090f/100f
+!most recent
+!urxvt.background:   rgba:11ef/090f/100f/99dd
+!urxvt.background: rgba:000d/000a/000f/dd00
+urxvt.cursorColor:  lwhite
+
+! black
+urxvt.color0:		dblack       
+urxvt.color8:       lblack
+
+! red
+urxvt.color1:       dred
+urxvt.color9:       lred
+
+! green
+urxvt*.color2:      dgreen
+urxvt*.color10:     lgreen
+
+! yellow
+urxvt*.color3:      dyellow
+urxvt*.color11:     lyellow
+
+! blue
+urxvt*.color4:      dblue
+urxvt*.color12:     lblue
+
+! magenta
+urxvt.color5:       dmag
+urxvt.color13:      lmag
+
+! cyan
+urxvt.color6:       dcyan
+urxvt.color14:      lcyan
+! white
+urxvt.color7:       dwhite
+urxvt.color15:      lwhite
+URxvt.perl-ext-common:-confirm-paste

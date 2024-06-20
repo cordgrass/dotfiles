@@ -1,0 +1,21 @@
+!rofi.font: myfont 11
+rofi.font: oxygenmono 10
+rofi.color-enabled: true
+rofi.terminal: urxvt
+rofi.hide-scrollbar: true
+
+! category 		   bg	 border	  separator
+!jan/17
+rofi.color-window: mybg, lred, dblack
+!nov/18
+!rofi.color-window: #607890, lred, dblack
+i!rofi.color-window: dblack, lred, dblack, dblue, lblue
+!                    bg    fg      altbg   hlbg  hlfg
+!jan/17
+rofi.color-normal: lblue, dblack, dblue, lgreen, dblack
+rofi.color-active: lblue, dblack, dblue, lgreen, dblack
+rofi.color-urgent: lblue, dblack, dblue, lgreen, dblack
+!nov/18
+!rofi.color-normal: dblack, dblue, dblack, dblue, dblack
+!rofi.color-active: dblack,  dblue, dblue, dblue, dblue
+!rofi.color-urgent: dblack, dblue,  dblue, lgreen, dblack

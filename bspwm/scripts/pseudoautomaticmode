@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#script based on the bspwm pseudoautomaticmode example
+
+focused_window=$(bspc query -N -n focused.automatic);
+
+if [ -n "$focused_window" ] ; then
+	wattr wh $focused_window | {
+		read w h
+		if [ $w -gt $h ] ; then
+			echo "split_dir=east"
+		else
+			echo "split_dir=south"
+		fi
+		echo "split_ratio=0.51"
+	}
+fi

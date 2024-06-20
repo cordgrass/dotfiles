@@ -1,0 +1,236 @@
+[colors]
+transparent=#000000000
+bg=#dd111111
+fg=${xrdb:polybar.foreground}
+#colors map to xresourses
+color0=${xrdb:polybar.color0}
+color8=${xrdb:polybar.color8}
+#red
+color1=${xrdb:polybar.color1}
+color9=${xrdb:polybar.color9}
+
+# green
+color2=${xrdb:polybar.color2}
+color10=${xrdb:polybar.color10}
+
+# yellow
+color3=${xrdb:polybar.color3}
+color11=${xrdb:polybar.color11}
+
+
+
+# blue
+color4=${xrdb:polybar.color4}
+color12=${xrdb:polybar.color12}
+
+# magenta
+color5=${xrdb:polybar.color5}
+color13=${xrdb:polybar.color13}
+
+# cyan
+color6=${xrdb:polybar.color6}
+color14=${xrdb:polybar.color14}
+
+# white
+color7=${xrdb:polybar.color7}
+color15=${xrdb:polybar.color15}
+#bg for tomorrow
+color17 = #607890
+#bg for witch
+color16 = #95d2a5
+
+[fonts]
+font-0=oxygenmono:weight=bold:size=9;2
+font-1=FontAwesome:pixelsize=10;2
+font-2=ricty:weight=bold:size=10.5;2
+
+#####
+#bars
+#####
+
+[bar/topbg]
+monitor = ${env:MONITOR:HDMI-1}
+bottom=false
+border-bottom-size=0
+border-bottom-color=${colors.color15}
+height=17
+font-0=${fonts.font-0}
+font-1=${fonts.font-1}
+font-2=${fonts.font-2}
+background = ${colors.color17}
+foreground = ${colors.color0}
+width=1920
+offset-x =0 
+offset-y=0
+#fixes the issue where bar is drawn on top of fullscreen
+wm-restack = bspwm
+modules-left = workspace
+modules-right = alsa temperature vpn eth wlan filesystem time
+#modules-center=mpd
+tray-position = right
+tray-padding = 2
+tray-transparent = false
+tray-offset-x = 0
+tray-background =
+#tray-background = ${root.background}
+
+
+########
+# modules
+########
+
+[module/workspace]
+type=internal/bspwm
+pin-workspaces=true
+format = <label-state>
+ws-icon-0 = 0;0
+ws-icon-1 = 1;1
+ws-icon-2 = 2;2
+ws-icon-3 = 3;3
+ws-icon-4 = 4;4
+ws-icon-5 = 5;5
+ws-icon-6 = 6;6
+ws-icon-7 = 7;7
+ws-icon-8 = 8;8
+ws-icon-9 = 9;9
+label-focused =%name%
+label-occupied = %name%
+label-empty = %name%
+label-focused-padding = 1
+label-empty-padding = 1
+label-occupied-padding =1
+
+#label-focused-background = ${colors.color12}
+label-focused-background = ${colors.color10}
+label-occupied-background=${colors.color6}
+label-empty-background=${colors.color17}
+
+#label-empty-foreground=${colors.color8}
+
+label-occupied-underline = ${colors.transparent}
+label-empty-underline = ${colors.transparent}
+
+
+
+[module/time]
+type=internal/date
+date=" %m.%d.%y |"
+time=" %H:%M "
+label=%date%%time%
+
+[module/mpd]
+type = internal/mpd
+font-0=${fonts.font-0}
+font-1=${fonts.font-1}
+
+host = 127.0.0.1
+port = 6600
+
+label-song = %artist% - %title%  
+format-playing =  <label-song>
+format-paused =  <label-song>
+format-stopped =
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC
+
+format-charging = " <label-charging>"
+format-full = " <label-full>"
+#format-charging = " <label-charging>"
+format-discharging = <label-discharging>
+#format-discharging-background=${colors.color0}
+format-discharging-foreground=${colors.color0}
+
+[module/batteryicon]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC
+
+label-full = 
+format-charging = 
+label-charging =
+#<ramp-capacity>
+format-discharging = <ramp-capacity>
+format-discharging-foreground=${colors.color9}
+
+ramp-capacity-0 = " BAT LOW!  "
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 =  
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+
+interval = 30
+spacing = 1
+
+fixed-values = true
+
+format-mounted = <label-mounted> 
+#label-mounted = "| %percentage_free%" 
+label-mounted = " | %free% |"
+
+[module/wlan]
+type=internal/network
+interface = wlp3s0
+interval=3.0
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = "wlp3s0 | "
+label-disconnected = 
+
+[module/eth]
+type=internal/network
+interface = enp0s25
+interval=30.0
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = "enp0s25 |"
+label-disconnected =
+
+
+[module/vpn]
+type=internal/network
+interface = tun0
+interval=2.0
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-disconnected-foreground = ${colors.color9}
+label-connected = "vpn "
+label-disconnected = "no vpn "
+
+[module/temperature]
+type = internal/temperature
+
+interval = 0.5
+
+thermal-zone = 0
+
+warn-temperature = 90
+format-warn = "<ramp> |"
+format = "<ramp> | "
+ramp-0 = 
+ramp-1 = 
+ramp-2 =  
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+
+[module/alsa]
+type = internal/alsa
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+format-volume = "<label-volume> "
+format-muted = ""
+
+

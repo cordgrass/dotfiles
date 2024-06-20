@@ -1,0 +1,21 @@
+
+#define myfg #bcbcbc
+!#define mybg #374166
+!#define mybg #1a1d26
+#define mybg #171921
+#define dblack #202020
+#define lblack #877d9d
+#define dred #f64984
+#define lred #f674a1
+#define dgreen #37c07b
+#define lgreen #3bffc2
+#define dyellow #db7573
+#define lyellow #fcb9a0
+#define dblue #495df6
+#define lblue #7382f0
+#define dmag #8449f6
+#define lmag #ac82ff
+#define dcyan #41cbca
+#define lcyan #5ee8ec
+#define dwhite #c9c9c9
+#define lwhite #e4e4e4

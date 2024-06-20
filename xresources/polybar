@@ -1,0 +1,41 @@
+!polybar.font: xft:myfont:size=myfontsize,xft:myaltfont:size=myfontsize,xft:myiconfont:pixelsize=myiconfontsize
+!polybar.font: xft:unifont:size=myfontsize,xft:liberationsans:size=myfontsize,xft:myiconfont:pixelsize=myiconfontsize
+polybar.font0: myfont:weight=bold:size=myfontsize;2
+polybar.font1: myaltfont:size=myfontsize;2
+polybar.font2: myiconfont:size=myiconfontsize;2
+
+
+polybar.foreground:   myfg
+!polybar.background:   rgba:000000
+
+! black
+polybar.color0:		dblack       
+polybar.color8:       lblack
+
+! red
+polybar.color1:       dred
+polybar.color9:       lred
+
+! green
+polybar.color2:      dgreen
+polybar.color10:     lgreen
+
+! yellow
+polybar.color3:      dyellow
+polybar.color11:     lyellow
+
+! blue
+polybar.color4:      dblue
+polybar.color12:     lblue
+
+! magenta
+polybar.color5:       dmag
+polybar.color13:      lmag
+
+! cyan
+polybar.color6:       dcyan
+polybar.color14:      lcyan
+! white
+polybar.color7:       dwhite
+polybar.color15:      lwhite
+

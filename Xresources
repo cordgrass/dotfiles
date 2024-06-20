@@ -1,0 +1,11 @@
+#define myfont Ricty\ Diminished
+#define myfontsize 11
+#define myaltfont Inconsolata\ for\ Powerline
+#define myiconfont fontawesome
+#define myiconfontsize 13
+#include "/home/winter/.xresources/colors/newcolors"
+#include "/home/winter/.xresources/urxvt"
+#include "/home/winter/.xresources/xterm"
+#include "/home/winter/.xresources/rofi"
+#include "/home/winter/.xresources/xft"
+#include "/home/winter/.xresources/polybar"
